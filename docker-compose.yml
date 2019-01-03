@@ -1,0 +1,25 @@
+# docker-compose up -d
+# docker exec -it img240 /bin/bash
+# dockerKillPS; dockerStopPS
+
+mysql:
+  image: mysql:5.7
+  container_name: img240-mysql
+  ports:
+    - "3306:3306"
+  environment:
+    - MYSQL_ROOT_PASSWORD=root
+    - MYSQL_DATABASE=dev
+
+app:
+  build: .
+  container_name: img240
+  environment:
+    RAILS_ENV: development
+  ports:
+    - '3000:3000'
+  volumes:
+    - ".:/workspace"
+  links:
+    - "mysql"
+  tty: true
