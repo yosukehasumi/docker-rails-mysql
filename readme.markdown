@@ -6,6 +6,10 @@
 
 This repo is meant for building a simple container that has the most basic requirements for learning Ruby and Ruby on Rails
 
+### Download Docker
+
+Only required if you don't have docker already installed on your computer. [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
+
 ### Installation
 
 1. Download this repo, unzip it, and place it in your working directory
